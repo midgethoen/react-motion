@@ -236,7 +236,7 @@ export default function components(React) {
 
     render() {
       const strippedStyle = this.state.currentStyles.map(stripStyle);
-      const renderedChildren = this.props.children(strippedStyle);
+      const renderedChildren = this.props.children(strippedStyle, this.state.currentVelocities);
       return renderedChildren && React.Children.only(renderedChildren);
     },
   });
